@@ -2,7 +2,6 @@
 //!
 //! Cloud and infrastructure component for SigmaOS.
 
-use anyhow::Result;
 use log::info;
 use serde::{Deserialize, Serialize};
 
@@ -40,3 +39,9 @@ impl ansible {
         Ok(())
     }
 }
+
+pub mod config;
+pub mod error;
+pub mod service;
+
+pub use error::{Error, Result};
